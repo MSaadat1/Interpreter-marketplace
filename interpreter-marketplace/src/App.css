@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.home {
+  color: #0a2a4e;
+  display: flex;
+  flex-direction: column;
+}
+.main-container {
+  background-color: rgb(234, 242, 242);
+}
+.line{
+  width: 400px;
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
