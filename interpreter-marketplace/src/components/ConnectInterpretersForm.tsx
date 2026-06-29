@@ -15,7 +15,7 @@ export function ConnectInterpretersForm({ onClose, interpreter }: Props) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:3001/messages", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/messages`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

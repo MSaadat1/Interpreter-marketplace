@@ -18,7 +18,7 @@ export const InterpreterProvider = ({ children }: Props) => {
     setError(null);
     try {
       const response = await fetch(
-        "http://localhost:3001/interpreter/register",
+       `${import.meta.env.VITE_API_URL}/interpreter/login`,
         {
           method: "POST",
           headers: {

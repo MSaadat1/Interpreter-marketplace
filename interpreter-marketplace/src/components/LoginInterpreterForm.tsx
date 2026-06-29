@@ -14,7 +14,7 @@ export function LoginInterpreterForm({ onCloseLoginForm }: Props) {
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const respond = await fetch("http://localhost:3001/interpreter/login", {
+    const respond = await fetch(`${import.meta.env.VITE_API_URL}/interpreter/login`, {
         method: "POST",
         headers: {
            "Content-Type": "application/json",  
