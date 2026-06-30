@@ -8,7 +8,12 @@ const prisma = new PrismaClient();
 const bcrypt = require("bcrypt");
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://interpreter-marketplace.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  }),
+);
 app.use(express.json());
 
 app.get("/interpreter/:id", async (req, res) => {
